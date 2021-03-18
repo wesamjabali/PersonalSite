@@ -38,106 +38,120 @@
         </v-col>
         <!-- Profile col -->
         <v-col :cols="$vuetify.breakpoint.mdAndUp ? 6 : 12">
-          <v-card outlined>
-            <div class="text-center title">Profile</div>
-            <v-col cols="12">
-              <v-row class="mt-1">
-                <v-card class="mx-3 my-2 px-2 py-2" width="98%" tile>
-                  <!-- CARD -->
-                  <v-row>
-                    <v-col :cols="$vuetify.breakpoint.mdAndUp ? '5' : '12' ">
+          <v-col cols="12">
+            <v-row class="mt-1">
+              <!-- Profile CARD -->
+              <v-card class="mx-2 mt-2 pl-2 py-3" width="98%" tile>
+                <v-row>
+                  <v-col
+                    :cols="$vuetify.breakpoint.mdAndUp ? '4' : '12'"
+                    class="d-flex justify-center"
+                  >
+                    <v-avatar size="150">
                       <v-img
-                        height="150"
-                        width="150"
                         src="https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/profile.png?raw=true"
                       />
-                    </v-col>
-                    <v-col :cols="$vuetify.breakpoint.mdAndUp ? '7' : '12'">
-                      <v-list-item>
-                        <v-list-item-content>
-                          <v-list-item-title>Wesam Jabali</v-list-item-title>
-                          <v-list-item-subtitle
-                            >Software Developer</v-list-item-subtitle
+                    </v-avatar>
+                  </v-col>
+                  <v-col :cols="$vuetify.breakpoint.mdAndUp ? '8' : '12'">
+                    <v-list-item>
+                      <v-list-item-content>
+                        <v-list-item-title>Wesam Jabali</v-list-item-title>
+                        <v-list-item-subtitle
+                          >Software Developer</v-list-item-subtitle
+                        >
+                      </v-list-item-content>
+                    </v-list-item>
+                    <v-list-item>
+                      <v-list-item-content>
+                        <v-list-item-title>Education</v-list-item-title>
+                        <v-list-item-subtitle
+                          >DePaul University</v-list-item-subtitle
+                        ><v-list-item-subtitle
+                          >Computer Science/Software
+                          Engineering</v-list-item-subtitle
+                        >
+                        <v-list-item-subtitle>GPA: 3.9</v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
+                    <v-list-item two-line>
+                      <v-list-item-content>
+                        <v-list-item-title>Skills</v-list-item-title>
+                        <v-row no-gutters>
+                          <v-col
+                            v-for="skill in skills"
+                            :key="skill.name"
+                            cols="6"
                           >
-                        </v-list-item-content>
-                      </v-list-item>
-                      <v-list-item>
-                        <v-list-item-content>
-                          <v-list-item-title>Education</v-list-item-title>
-                          <v-list-item-subtitle
-                            >DePaul University</v-list-item-subtitle
-                          ><v-list-item-subtitle
-                            >Computer Science/Software
-                            Engineering</v-list-item-subtitle
-                          >
-                          <v-list-item-subtitle>GPA: 3.9</v-list-item-subtitle>
-                        </v-list-item-content>
-                      </v-list-item>
-                      <v-list-item two-line>
-                        <v-list-item-content>
-                          <v-list-item-title>Skills</v-list-item-title>
-                          <v-row no-gutters>
-                            <v-col
-                              v-for="skill in skills"
-                              :key="skill.name"
-                              cols="6"
-                            >
-                              <v-list-item-subtitle>{{
-                                skill.name
-                              }}</v-list-item-subtitle>
-                            </v-col>
-                          </v-row>
-                        </v-list-item-content>
-                      </v-list-item>
-                    </v-col>
-                  </v-row>
-                  <!-- CARD -->
-                </v-card>
-                <!-- <v-img
-                    max-height="200"
-                    max-width="200"
-                    src="https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/profile.png?raw=true"
-                  ></v-img> -->
-              </v-row>
-            </v-col>
-          </v-card>
+                            <v-list-item-subtitle>{{
+                              skill.name
+                            }}</v-list-item-subtitle>
+                          </v-col>
+                        </v-row>
+                      </v-list-item-content>
+                    </v-list-item>
+                  </v-col>
+                </v-row>
+              </v-card>
+              <!-- CARD -->
+            </v-row>
+          </v-col>
+          <v-col cols="12">
+            <v-row class="mt-1">
+              <!-- RESUME CARD -->
+              <v-card
+                :href="resume"
+                target="_blank"
+                class="mx-2 pb-3"
+                width="98%"
+                tile
+              >
+                <v-img
+                  src="https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/server_banner_compact.png?raw=true"
+                
+                />
+                 <div
+                  
+                  class="text-center py-5 title"
+                >Resume</div>
+                <div class="text-center mx-5">It includes everything I've ever done, ever.</div>
+              </v-card>
+            </v-row>
+          </v-col>
         </v-col>
         <!-- Projects Col -->
         <v-col :cols="$vuetify.breakpoint.mdAndUp ? 6 : 12">
-          <v-card outlined>
-            <div class="text-center title">Projects</div>
-            <v-col cols="12">
-              <v-row class="mt-1 justify-center">
-                <v-card
-                  v-for="project in projects"
-                  :key="project.name"
-                  :href="project.url"
-                  target="_blank"
-                  class="mx-2 my-2"
-                  width="96%"
-                  tile
-                >
-                  <v-img :src="project.photo" height="200"> </v-img>
-                  <div class="text-center title py-5">{{ project.name }}</div>
-                  <div
-                    v-html="project.description"
-                    class="text-center pb-5 mx-5"
-                  ></div>
-                  <div v-if="project.demo" class="text-center">
-                    <v-btn
-                      color="primary"
-                      class="text-center mx-auto mb-5"
-                      outlined
-                      :href="project.demo"
-                      target="_blank"
-                      width="180px"
-                      >Demo</v-btn
-                    >
-                  </div>
-                </v-card>
-              </v-row>
-            </v-col>
-          </v-card>
+          <v-col cols="12">
+            <v-row class="mt-1 justify-center">
+              <v-card
+                v-for="project in projects"
+                :key="project.name"
+                :href="project.url"
+                target="_blank"
+                class="mx-2 my-2"
+                width="96%"
+                tile
+              >
+                <v-img :src="project.photo" height="200"> </v-img>
+                <div class="text-center title py-5">{{ project.name }}</div>
+                <div
+                  v-html="project.description"
+                  class="text-center pb-5 mx-5"
+                ></div>
+                <div v-if="project.demo" class="text-center">
+                  <v-btn
+                    color="primary"
+                    class="text-center mx-auto mb-5"
+                    outlined
+                    :href="project.demo"
+                    target="_blank"
+                    width="180px"
+                    >Demo</v-btn
+                  >
+                </div>
+              </v-card>
+            </v-row>
+          </v-col>
         </v-col>
         <!-- Done -->
       </v-row>
@@ -155,6 +169,7 @@ export default {
   },
   data() {
     return {
+      resume: "",
       skills: [
         { name: "Fullstack" },
         { name: "Java" },
