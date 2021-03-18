@@ -36,6 +36,7 @@
                 </div>
               </v-col>
               <v-col cols="2" />
+              <!-- To keep cols at 12 -->
             </v-row>
           </v-card>
         </v-col>
@@ -56,6 +57,16 @@
               v-html="project.description"
               class="text-center pb-5 mx-5"
             ></div>
+            <div v-if="project.demo" class="text-center">
+              <v-btn
+                color="primary"
+                class="text-center mx-auto mb-5"
+                outlined
+                :href="project.demo"
+                width="200px"
+                >Demo</v-btn
+              >
+            </div>
           </v-card>
         </v-col>
         <!-- Second col -->
@@ -93,6 +104,8 @@ export default {
             "A Discord bot to manage university servers, written with <b>Node</b> and <b>DiscordJS</b>",
           photo:
             "https://github.com/wesamjabali/BlueDaemon/blob/main/assets/banner.png?raw=true",
+          demo:
+            "https://discord.com/oauth2/authorize?client_id=819103115693260860&permissions=8&scope=bot",
         },
         {
           name: "CDM Discussions",
@@ -115,6 +128,7 @@ export default {
           description: "A course management solution written in <b>VueJS.</b>",
           photo:
             "https://github.com/wesamjabali/d3l-ui/blob/main/src/assets/login.jpg?raw=true",
+          demo: "https://csc394.netlify.app/",
         },
         {
           name: "D3L API",
@@ -123,6 +137,7 @@ export default {
             "The API that runs D3L. Written with <b>NodeJS, ExpressJS, Knex, PostgreSQL.</b> Authentication done with <b>JWT.</b>",
           photo:
             "https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/API.png?raw=true",
+          demo: "https://csc394.netlify.app/",
         },
       ],
     };
