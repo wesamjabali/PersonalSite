@@ -103,18 +103,16 @@
                 :href="resume"
                 target="_blank"
                 class="mx-2 pb-3"
-                width="98%"
+                width="97%"
                 tile
               >
                 <v-img
-                  src="https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/server_banner_compact.png?raw=true"
-                
+                  src="https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/resume.png?raw=true"
                 />
-                 <div
-                  
-                  class="text-center py-5 title"
-                >Resume</div>
-                <div class="text-center mx-5">It includes everything I've ever done, ever.</div>
+                <div class="text-center py-5 title">Resume</div>
+                <div class="text-center mx-5">
+                  It includes everything I've ever done, ever.
+                </div>
               </v-card>
             </v-row>
           </v-col>
