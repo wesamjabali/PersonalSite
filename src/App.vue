@@ -66,6 +66,7 @@
                 class="text-center mx-auto mb-5"
                 outlined
                 :href="project.demo"
+                target="_blank"
                 width="200px"
                 >Demo</v-btn
               >
