@@ -50,31 +50,27 @@
           >
             <v-img :src="project.photo" height="200"> </v-img>
             <div class="text-center title py-5">{{ project.name }}</div>
-            <div v-html="project.description" class="text-center pb-5 mx-5"></div>
+            <div
+              v-html="project.description"
+              class="text-center pb-5 mx-5"
+            ></div>
           </v-card>
         </v-col>
         <!-- Second col -->
         <v-col :cols="$vuetify.breakpoint.mdAndUp ? 6 : 12">
-          <div class="text-center title">Here's some stuff I'm working on</div>
+          <div class="text-center title">My Info</div>
 
-          <v-card
-            v-for="project in projects"
-            :key="project.name"
-            :href="project.url"
-            target="_blank"
-            class="d-flex"
-          >
+          <v-card class="mx-auto my-5">
+            <div class="title text-center">Contact</div>
+          </v-card>
+          <v-card class="mx-auto my-5">
+            <div class="title text-center">Resume</div>
           </v-card>
         </v-col>
       </v-row>
     </v-main>
   </v-app>
 </template>
-<style>
-/* .vue-typer .custom.char { */
-/* color: white; */
-/* } */
-</style>
 
 <script>
 import { VueTyper } from "vue-typer";
@@ -107,9 +103,8 @@ export default {
           name: "ChiBatterySystems Clock",
           url: "https://chibatterysystems.com",
           description:
-            "Created a time-sheet management system full-stack using <b>VueJS, NodeJS, ExpressJS</b> and <b>PostgreSQL</b> which is currently in use by over 20 employees on a daily basis.",
-          photo:
-            "https://i.ytimg.com/vi/y8HhPXo-Dxw/maxresdefault.jpg",
+            "A closed-source (by client request) time-sheet management system I created full-stack using <b>VueJS, NodeJS, ExpressJS</b> and <b>PostgreSQL</b><br />This is currently in use by over 20 employees on a daily basis.",
+          photo: "https://i.ytimg.com/vi/y8HhPXo-Dxw/maxresdefault.jpg",
         },
         {
           name: "D3L Frontend",
