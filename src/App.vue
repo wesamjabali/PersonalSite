@@ -15,7 +15,10 @@
                 </div>
               </v-col>
               <v-col :cols="$vuetify.breakpoint.mdAndUp ? 8 : 12">
-                <div class="title text-xl-h2 text-lg-h3 text-sm-h4 text-center">
+                <div
+                  style="height: 50px"
+                  class="title text-xl-h2 text-lg-h3 text-sm-h4 text-center"
+                >
                   <vue-typer
                     :text="[
                       'Hey there.',
@@ -40,7 +43,7 @@
             </v-row>
           </v-card>
         </v-col>
-        <v-col :cols="$vuetify.breakpoint.mdAndUp ? 6 : 12">
+        <v-col :cols="$vuetify.breakpoint.mdAndUp ? 6 : 12" class="mt-md-5">
           <v-card outlined>
             <div class="text-center title">My Projects</div>
           </v-card>
@@ -70,7 +73,7 @@
           </v-card>
         </v-col>
         <!-- Second col -->
-        <v-col :cols="$vuetify.breakpoint.mdAndUp ? 6 : 12">
+        <v-col :cols="$vuetify.breakpoint.mdAndUp ? 6 : 12" class="mt-md-5">
           <v-card outlined>
             <div class="text-center title">My Info</div>
           </v-card>
