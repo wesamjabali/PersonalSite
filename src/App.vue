@@ -129,7 +129,8 @@ export default {
         {
           name: "D3L Frontend",
           url: "https://github.com/wesamjabali/d3l-ui",
-          description: "A course management solution written in <b>VueJS.</b>",
+          description:
+            "A course management solution written in <b>VueJS.</b><br/>Demo Username: <b>admin@admin.com</b><br/>Demo Password: <b>admin</b>",
           photo:
             "https://github.com/wesamjabali/d3l-ui/blob/main/src/assets/login.jpg?raw=true",
           demo: "https://csc394.netlify.app/",
@@ -141,7 +142,6 @@ export default {
             "The API that runs D3L. Written with <b>NodeJS, ExpressJS, Knex, PostgreSQL.</b> Authentication done with <b>JWT.</b>",
           photo:
             "https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/API.png?raw=true",
-          demo: "https://csc394.netlify.app/",
         },
       ],
     };
