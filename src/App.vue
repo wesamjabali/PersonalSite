@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <v-row class="mx-5">
+      <v-row :class="$vuetify.breakpoint.mdAndUp ? 'mx-5' : ''">
         <v-col cols="12">
           <v-card class="mx-auto d-flex" flat>
             <v-row align="center" justify="center">
