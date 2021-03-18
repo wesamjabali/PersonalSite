@@ -40,13 +40,15 @@
           </v-card>
         </v-col>
         <v-col :cols="$vuetify.breakpoint.mdAndUp ? 6 : 12">
-          <div class="text-center title">My projects</div>
+          <v-card outlined>
+            <div class="text-center title">My Projects</div>
+          </v-card>
           <v-card
             v-for="project in projects"
             :key="project.name"
             :href="project.url"
             target="_blank"
-            class="mx-auto my-5"
+            class="mx-auto mt-2 mb-5"
           >
             <v-img :src="project.photo" height="200"> </v-img>
             <div class="text-center title py-5">{{ project.name }}</div>
@@ -58,12 +60,13 @@
         </v-col>
         <!-- Second col -->
         <v-col :cols="$vuetify.breakpoint.mdAndUp ? 6 : 12">
-          <div class="text-center title">My Info</div>
-
-          <v-card class="mx-auto my-5">
+          <v-card outlined>
+            <div class="text-center title">My Info</div>
+          </v-card>
+          <v-card class="mx-auto mt-2">
             <div class="title text-center">Contact</div>
           </v-card>
-          <v-card class="mx-auto my-5">
+          <v-card class="mx-auto mt-5">
             <div class="title text-center">Resume</div>
           </v-card>
         </v-col>
