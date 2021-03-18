@@ -41,7 +41,7 @@
           <v-col cols="12">
             <v-row class="mt-1">
               <!-- Profile CARD -->
-              <v-card class="mx-2 mt-2 pl-2 py-3" width="98%" tile>
+              <v-card class="mx-2 mt-2 pl-2 py-3" width="96%" tile>
                 <v-row>
                   <v-col
                     :cols="$vuetify.breakpoint.mdAndUp ? '4' : '12'"
@@ -99,7 +99,7 @@
           <v-col cols="12">
             <v-row class="mt-1">
               <!-- RESUME CARD -->
-              <v-card :href="resume" class="mx-2 pb-3" width="97%" tile>
+              <v-card :href="resume" class="mx-2 pb-3" width="96%" tile>
                 <v-img
                   src="https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/resume.png?raw=true"
                 />
