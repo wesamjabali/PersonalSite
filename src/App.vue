@@ -99,7 +99,8 @@ export default {
           url: "https://discord.gg/4GbaSsvbDb",
           description:
             "A Discord server I created and manage for DePaul University, consisting of about 500 members, including 7 faculty members.",
-          photo: "https://i.imgur.com/mdybSa3.png",
+          photo:
+            "https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/server_banner_compact.png?raw=true",
         },
         {
           name: "D3L Frontend",
