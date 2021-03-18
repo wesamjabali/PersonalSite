@@ -99,13 +99,7 @@
           <v-col cols="12">
             <v-row class="mt-1">
               <!-- RESUME CARD -->
-              <v-card
-                :href="resume"
-                target="_blank"
-                class="mx-2 pb-3"
-                width="97%"
-                tile
-              >
+              <v-card :href="resume" class="mx-2 pb-3" width="97%" tile>
                 <v-img
                   src="https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/resume.png?raw=true"
                 />
@@ -167,7 +161,8 @@ export default {
   },
   data() {
     return {
-      resume: "",
+      resume:
+        "https://github.com/wesamjabali/PersonalSite/raw/main/src/assets/Jabali%20Wesam%20Resume.pdf",
       skills: [
         { name: "Fullstack" },
         { name: "Java" },
