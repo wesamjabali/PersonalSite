@@ -32,26 +32,25 @@
           <v-tab>Projects</v-tab>
           <v-tab>Contact</v-tab>
         </v-tabs>
-        <v-row class="d-flex justify-center">
-          <v-tabs-items v-model="tab">
-            <v-tab-item>
-              <Profile />
-            </v-tab-item>
-            <v-tab-item>
-              <Projects />
-            </v-tab-item>
-            <v-tab-item>
-              <Contact />
-            </v-tab-item>
-          </v-tabs-items>
-        </v-row>
+        <!-- <v-row class="d-flex justify-center"> -->
+        <v-tabs-items v-model="tab">
+          <v-tab-item>
+            <Profile />
+          </v-tab-item>
+          <v-tab-item>
+            <Projects />
+          </v-tab-item>
+          <v-tab-item>
+            <Contact />
+          </v-tab-item>
+        </v-tabs-items>
+        <!-- </v-row> -->
       </v-row>
     </v-main>
   </v-app>
 </template>
 
 <script>
-
 import { VueTyper } from "vue-typer";
 import Profile from "./views/Profile";
 import Projects from "./views/Projects";
