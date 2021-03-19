@@ -41,7 +41,12 @@
           <v-col cols="12">
             <v-row class="mt-1">
               <!-- Profile CARD -->
-              <v-card class="mx-2 mt-2 pl-2 py-3" width="96%" tile>
+              <v-card
+                class="mx-2 mt-2 pl-2 py-3"
+                height="350px"
+                width="96%"
+                tile
+              >
                 <v-row>
                   <v-col
                     :cols="$vuetify.breakpoint.mdAndUp ? '4' : '12'"
@@ -99,13 +104,19 @@
           <v-col cols="12">
             <v-row class="mt-1">
               <!-- RESUME CARD -->
-              <v-card :href="resume" class="mx-2 pb-3" width="96%" tile>
+              <v-card
+                :href="resume"
+                class="mx-2 pb-3"
+                height="350px"
+                width="96%"
+                tile
+              >
                 <v-img
                   src="https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/resume.png?raw=true"
                 />
                 <div class="text-center py-5 title">Resume</div>
                 <div class="text-center mx-5">
-                  It includes everything I've ever done, ever.
+                  A summary of my qualifications and history.
                 </div>
               </v-card>
             </v-row>
@@ -122,25 +133,30 @@
                 target="_blank"
                 class="mx-2 my-2"
                 width="96%"
+                height="350px"
                 tile
+                style="position:relative; padding-bottom: 50px;"
               >
-                <v-img :src="project.photo" height="200"> </v-img>
-                <div class="text-center title py-5">{{ project.name }}</div>
-                <div
-                  v-html="project.description"
-                  class="text-center pb-5 mx-5"
-                ></div>
-                <div v-if="project.demo" class="text-center">
+                <v-img :src="project.photo" height="40%"> </v-img>
+                <div class="text-center title pt-3">{{ project.name }}</div>
+                <v-card-text class="text-center">
+                  <div v-html="project.description" class="text-center mx-5" />
+                </v-card-text>
+                <v-card-actions
+                  width="100%"
+                  v-if="project.demo"
+                  style="bottom:0; left:0; right:0; position:absolute;"
+                >
                   <v-btn
                     color="primary"
-                    class="text-center mx-auto mb-5"
+                    class="mx-auto"
                     outlined
                     :href="project.demo"
                     target="_blank"
                     width="180px"
                     >Demo</v-btn
                   >
-                </div>
+                </v-card-actions>
               </v-card>
             </v-row>
           </v-col>
@@ -209,7 +225,7 @@ export default {
           name: "D3L Frontend",
           url: "https://github.com/wesamjabali/d3l-ui",
           description:
-            "A course management solution written in <b>VueJS.</b><br/>Demo Username: <b>admin@admin.com</b><br/>Demo Password: <b>admin</b>",
+            "A course management solution written in <b>VueJS.</b><div class='text-left'><br/>Demo Username: <b>admin@admin.com</b><br/>Demo Password: <b>admin</b></div>",
           photo:
             "https://github.com/wesamjabali/d3l-ui/blob/main/src/assets/login.jpg?raw=true",
           demo: "https://csc394.netlify.app/",
