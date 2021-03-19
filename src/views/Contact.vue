@@ -1,37 +1,65 @@
 <template>
-  <!-- <v-snackbar top tile color="success" v-model="snackbar"
-        >Sent! I'll get back to you shortly.</v-snackbar
-      > -->
-  <v-card :disabled="sent" class="mx-2 my-2" tile>
-    <v-col cols="12">
-      <div class="title text-center mt-2 mb-8">Contact Me</div>
-      <v-form name="contact" class="text-center" @submit.prevent="sendEmail">
-        <v-text-field
-          v-model="contactName"
-          type="text"
-          outlined
-          label="Name"
-          name="name"
-        />
-        <v-text-field
-          v-model="company"
-          type="text"
-          outlined
-          label="Company"
-          name="company"
-        />
-        <v-text-field
-          v-model="email"
-          type="text"
-          outlined
-          label="E-Mail/Phone"
-          name="email"
-        />
-        <v-textarea v-model="message" label="Message" outlined name="message" />
-        <v-btn type="submit" color="primary" outlined>Send</v-btn>
-      </v-form>
-    </v-col>
-  </v-card>
+  <div class="d-flex justify-center">
+    <v-snackbar top tile color="success" v-model="snackbar"
+      >Sent! I'll get back to you shortly.</v-snackbar
+    >
+    <v-card :disabled="sent" class="mx-2 mb-2" width="100vw" tile>
+      <v-card
+        flat
+        tile
+        class="primary white--text d-flex align-center justify-center"
+        height="170px"
+      >
+        <div class="text-h3">
+          Contact
+        </div>
+      </v-card>
+      <v-col>
+        <v-form
+          ref="contact"
+          name="contact"
+          class="text-center"
+          @submit.prevent="sendEmail"
+        >
+          <v-text-field
+            v-model="contactName"
+            type="text"
+            outlined
+            label="Name"
+            name="name"
+            :rules="required"
+          />
+
+          <v-text-field
+            v-model="company"
+            type="text"
+            outlined
+            label="Company"
+            name="company"
+            :rules="required"
+          />
+
+          <v-text-field
+            v-model="email"
+            type="text"
+            outlined
+            label="E-Mail"
+            name="email"
+            required
+            :rules="emailRules"
+          />
+          <v-textarea
+            v-model="message"
+            label="Message"
+            outlined
+            name="message"
+            :rules="required"
+          />
+          <v-btn type="submit" color="primary" outlined>Send</v-btn>
+        </v-form>
+      </v-col>
+    </v-card>
+  </div>
 </template>
 
 <script>
@@ -44,6 +72,9 @@ export default {
       return !this.$vuetify.breakpoint.mdAndUp;
     },
     sendEmail() {
+      if (!this.$refs.contact.validate()) {
+        return;
+      }
       var emailData = {
         name: this.contactName,
         company: this.company,
@@ -63,6 +94,11 @@ export default {
       company: "",
       email: "",
       message: "",
+      emailRules: [
+        (v) => !!v || "This field is required",
+        (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
+      ],
+      required: [(v) => !!v || "This field is required"],
     };
   },
 };
