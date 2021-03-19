@@ -69,11 +69,13 @@
             <v-col cols="12">
               <div class="title text-center mt-2 mb-8">Contact Me</div>
               <form
+                data-netlify-honeypot="bot-field"
                 name="contact"
                 method="POST"
                 data-netlify="true"
                 class="text-center"
               >
+                <input type="hidden" name="spam-catcher" value="contact" />
                 <v-text-field type="text" outlined label="Name" name="name" />
                 <v-text-field
                   type="text"
