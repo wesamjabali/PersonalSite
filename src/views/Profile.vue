@@ -68,7 +68,7 @@
           <v-card class="my-2 mx-2" tile>
             <v-col cols="12">
               <div class="title text-center mt-2 mb-8">Contact Me</div>
-              <v-form
+              <form
                 name="contact"
                 method="POST"
                 data-netlify="true"
@@ -89,7 +89,7 @@
                 />
                 <v-textarea label="Message" outlined name="message" />
                 <v-btn type="submit" color="primary" outlined>Send</v-btn>
-              </v-form>
+              </form>
             </v-col>
           </v-card>
         </v-col>
@@ -125,6 +125,7 @@ export default {
         { name: "ExpressJS", icon: require("@/assets/icons/express.png") },
         { name: "VueJS", icon: require("@/assets/icons/vue.png") },
         { name: "Data Analysis", icon: require("@/assets/icons/data.png") },
+        { name: "JWT" },
         {
           name: "Interpersonal",
           icon: require("@/assets/icons/handshake.png"),
