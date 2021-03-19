@@ -1,19 +1,12 @@
 <template>
   <!-- Projects Col -->
-  <v-row>
+  <v-row style="max-width: 1200px;" class="mx-auto">
     <v-col
       :cols="$vuetify.breakpoint.mdAndUp ? '6' : '12'"
       v-for="project in projects"
       :key="project.name"
     >
-      <v-card
-        :href="project.url"
-        target="_blank"
-        class="mx-2 my-2"
-        height="350px"
-        tile
-      >
-        <!-- style="position:relative; padding-bottom: 50px;" -->
+      <v-card :href="project.url" target="_blank" height="350px" tile>
         <v-img :src="project.photo" height="40%"> </v-img>
         <div class="text-center title pt-3">
           {{ project.name }}
@@ -38,7 +31,6 @@
       </v-card>
     </v-col>
   </v-row>
-
   <!-- Done -->
 </template>
 

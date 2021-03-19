@@ -20,9 +20,25 @@
                   </v-avatar>
                 </v-col>
                 <v-col cols="8" class="d-flex align-center justify-center">
-                  <div class="title text-center">
-                    A full-stack developer looking for work.
-                  </div>
+                  <v-btn outlined class="mx-2" :href="resume" color="white"
+                    >Resume</v-btn
+                  >
+                  <v-btn
+                    outlined
+                    class="mx-2"
+                    href="https://github.com/wesamjabali"
+                    target="_blank"
+                    color="white"
+                    >GitHub</v-btn
+                  >
+                  <v-btn
+                    outlined
+                    class="mx-2"
+                    href="https://linkedin.com/in/wesamjabali"
+                    target="_blank"
+                    color="white"
+                    >Linkedin</v-btn
+                  >
                 </v-col>
                 <v-col cols="2" />
               </v-row>
@@ -63,39 +79,6 @@
           </v-col>
         </v-row>
       </v-card>
-      <v-row>
-        <v-col cols="12">
-          <v-card class="my-2 mx-2" tile>
-            <v-col cols="12">
-              <div class="title text-center mt-2 mb-8">Contact Me</div>
-              <form
-                data-netlify-honeypot="bot-field"
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                class="text-center"
-              >
-                <input type="hidden" name="spam-catcher" value="contact" />
-                <v-text-field type="text" outlined label="Name" name="name" />
-                <v-text-field
-                  type="text"
-                  outlined
-                  label="Company"
-                  name="company"
-                />
-                <v-text-field
-                  type="email"
-                  outlined
-                  label="E-Mail"
-                  name="email"
-                />
-                <v-textarea label="Message" outlined name="message" />
-                <v-btn type="submit" color="primary" outlined>Send</v-btn>
-              </form>
-            </v-col>
-          </v-card>
-        </v-col>
-      </v-row>
     </v-col>
   </v-row>
 </template>

@@ -10,7 +10,7 @@
                 class="title text-xl-h2 text-lg-h3 text-sm-h4 text-center "
               >
                 <vue-typer
-                  :text="['Hey there.', 'I\'m Wesam Jabali.']"
+                  :text="['Wesam Jabali']"
                   :repeat="0"
                   :shuffle="false"
                   initial-action="typing"
@@ -30,31 +30,39 @@
         <v-tabs v-model="tab" class="mb-5" fixed-tabs>
           <v-tab>Profile</v-tab>
           <v-tab>Projects</v-tab>
+          <v-tab>Contact</v-tab>
         </v-tabs>
-
-        <v-tabs-items v-model="tab">
-          <v-tab-item>
-            <Profile />
-          </v-tab-item>
-          <v-tab-item>
-            <Projects />
-          </v-tab-item>
-        </v-tabs-items>
+        <v-row class="d-flex justify-center">
+          <v-tabs-items v-model="tab">
+            <v-tab-item>
+              <Profile />
+            </v-tab-item>
+            <v-tab-item>
+              <Projects />
+            </v-tab-item>
+            <v-tab-item>
+              <Contact />
+            </v-tab-item>
+          </v-tabs-items>
+        </v-row>
       </v-row>
     </v-main>
   </v-app>
 </template>
 
 <script>
+
 import { VueTyper } from "vue-typer";
 import Profile from "./views/Profile";
 import Projects from "./views/Projects";
+import Contact from "./views/Contact";
 export default {
   name: "App",
   components: {
     VueTyper,
     Profile,
     Projects,
+    Contact,
   },
   data() {
     return {

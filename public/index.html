@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
   </head>
   <body>
-    <form name="ask-question" netlify netlify-honeypot="bot-field" hidden>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
       <input type="text" name="name" />
-      <input type="radio" name="panelist" />
-      <textarea name="question"></textarea>
+      <textarea name="message"></textarea>
     </form>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
