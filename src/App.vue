@@ -10,11 +10,7 @@
                 class="title text-xl-h2 text-lg-h3 text-sm-h4 text-center "
               >
                 <vue-typer
-                  :text="[
-                    'Hey there.',
-                    'Thanks for visiting my page.',
-                    'I\'m Wesam Jabali.',
-                  ]"
+                  :text="['Hey there.', 'I\'m Wesam Jabali.']"
                   :repeat="0"
                   :shuffle="false"
                   initial-action="typing"
@@ -30,7 +26,7 @@
             </v-col>
           </v-row>
         </v-card>
-        
+
         <v-tabs v-model="tab" class="mb-5" fixed-tabs>
           <v-tab>Profile</v-tab>
           <v-tab>Projects</v-tab>
