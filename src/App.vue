@@ -30,7 +30,7 @@
             </v-col>
           </v-row>
         </v-card>
-        >
+        
         <v-tabs v-model="tab" class="mb-5" fixed-tabs>
           <v-tab>Profile</v-tab>
           <v-tab>Projects</v-tab>
