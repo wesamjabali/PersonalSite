@@ -28,11 +28,10 @@
         </v-card>
 
         <v-tabs v-model="tab" class="mb-5" fixed-tabs>
-          <v-tab>Profile</v-tab>
+          <v-tab >Profile</v-tab>
           <v-tab>Projects</v-tab>
           <v-tab>Contact</v-tab>
         </v-tabs>
-        <!-- <v-row class="d-flex justify-center"> -->
         <v-tabs-items v-model="tab">
           <v-tab-item>
             <Profile />

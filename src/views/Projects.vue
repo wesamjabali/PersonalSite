@@ -10,8 +10,9 @@
         :href="project.url"
         target="_blank"
         height="350px"
-        class="mx-2"
+        class="mx-2 mb-1 "
         tile
+        hover
       >
         <v-img :src="project.photo" height="150px"> </v-img>
         <div class="text-center title pt-3">
