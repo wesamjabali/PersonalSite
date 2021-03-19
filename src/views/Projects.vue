@@ -76,7 +76,7 @@ export default {
           name: "D3L Frontend",
           url: "https://github.com/wesamjabali/d3l-ui",
           description:
-            "A course management solution written in <b>VueJS.</b><div class='text-left'><br/>Demo Username: <b>admin@admin.com</b><br/>Demo Password: <b>admin</b></div>",
+            "A course management solution written in <b>VueJS.</b><div class='text-left'><b>Username: </b>admin@admin.com<br/><b>Password: </b>admin</div>",
           photo:
             "https://github.com/wesamjabali/d3l-ui/blob/main/src/assets/login.jpg?raw=true",
           demo: "https://csc394.netlify.app/",
