@@ -44,7 +44,7 @@
           <v-tab>Projects</v-tab>
           <v-tab>Contact</v-tab>
         </v-tabs>
-        <v-tabs-items v-model="tab">
+        <v-tabs-items :style="$vuetify.theme.dark ? 'background: #121212' : 'background: #FFFFFF;'" v-model="tab">
           <v-tab-item>
             <Profile />
           </v-tab-item>
