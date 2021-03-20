@@ -45,11 +45,8 @@
                   >
                     <v-row class="text-center align-center">
                       <v-col cols="12">
-                        <v-btn
-                          rounded
-                          color="secondary"
-                          :href="resume"
-                          >Resume</v-btn
+                        <v-btn rounded color="secondary" @click="openPDF()">
+                          Resume</v-btn
                         >
                         <v-btn
                           rounded
@@ -206,11 +203,15 @@
 </template>
 
 <script>
+import pdf from "@/assets/Jabali_Wesam_Resume.pdf";
 export default {
   name: "Profile",
   methods: {
     isMobile() {
       return !this.$vuetify.breakpoint.mdAndUp;
+    },
+    openPDF() {
+      window.open(pdf);
     },
   },
   data() {
