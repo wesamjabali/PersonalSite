@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <v-row style="max-width: 1200px;" class="mx-auto py-5">
+      <v-row style="max-width: 1200px; height: 100%;" class="mx-auto py-5">
         <v-row class="d-flex align-center">
           <v-col cols="2" />
           <v-col cols="8">
@@ -14,7 +14,7 @@
                 :shuffle="false"
                 initial-action="typing"
                 :pre-type-delay="0"
-                :type-delay="70"
+                :type-delay="120"
                 :pre-erase-delay="2000"
                 :erase-delay="50"
                 erase-style="backspace"
@@ -44,7 +44,12 @@
           <v-tab>Projects</v-tab>
           <v-tab>Contact</v-tab>
         </v-tabs>
-        <v-tabs-items :style="$vuetify.theme.dark ? 'background: #121212' : 'background: #FFFFFF;'" v-model="tab">
+        <v-tabs-items
+          :style="
+            $vuetify.theme.dark ? 'background: #121212' : 'background: #FFFFFF;'
+          "
+          v-model="tab"
+        >
           <v-tab-item>
             <Profile />
           </v-tab-item>

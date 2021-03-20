@@ -37,7 +37,9 @@
         </v-card-actions>
       </v-card>
     </v-col>
+  
   </v-row>
+  
   <!-- Done -->
 </template>
 
