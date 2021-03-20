@@ -62,15 +62,11 @@
 </template>
 
 <style>
-/* html {
-  overflow-x: hidden;
-  width: 100%;
-}
-
+html,
 body {
   overflow-x: hidden;
-  width: 100%;
-} */
+  width: 100vw;
+}
 .theme--light .vue-typer .custom.char.typed {
   color: #000000;
 }
