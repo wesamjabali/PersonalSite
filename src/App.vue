@@ -23,7 +23,14 @@
               ></vue-typer>
             </div>
           </v-col>
-          <v-col cols="2" :class="isMobile() ? 'd-flex ml-n3 mt-n6': 'd-flex align-center justify-center'">
+          <v-col
+            cols="2"
+            :class="
+              isMobile()
+                ? 'd-flex ml-n3 mt-n6'
+                : 'd-flex align-center justify-center'
+            "
+          >
             <v-switch
               class="switch"
               inset
@@ -56,13 +63,13 @@
 
 <style>
 html {
-    overflow-x: hidden;
-    width: 100%;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
-    overflow-x: hidden;
-    width: 100%
+  overflow-x: hidden;
+  width: 100%;
 }
 .theme--light .vue-typer .custom.char.typed {
   color: #000000;

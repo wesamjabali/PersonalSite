@@ -1,81 +1,205 @@
 <template>
-  <v-card class="mx-2 my-2 pb-5" tile>
-    <v-row no-gutters>
-      <v-col cols="12">
-        <v-card
-          flat
-          tile
-          class="primary mt-n2 py-2 pl-3 white--text"
-          height="170px"
-        >
-          <v-row class="d-flex">
-            <v-col cols="2">
-              <v-avatar size="150">
-                <v-img
-                  v-if="!isMobile()"
-                  src="https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/profile.png?raw=true"
-                />
-              </v-avatar>
-            </v-col>
-            <v-col cols="8" class="d-flex align-center justify-center">
-              <v-btn outlined class="mx-2" :href="resume" color="white"
-                >Resume</v-btn
-              >
-              <v-btn
-                outlined
-                class="mx-2"
-                href="https://github.com/wesamjabali"
-                target="_blank"
-                color="white"
-                >GitHub</v-btn
-              >
-              <v-btn
-                outlined
-                class="mx-2"
-                href="https://linkedin.com/in/wesamjabali"
-                target="_blank"
-                color="white"
-                >Linkedin</v-btn
-              >
-            </v-col>
-            <v-col cols="2" />
-          </v-row>
-        </v-card>
-      </v-col>
-      <v-col cols="12" class="text-center">
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title>
-              Education
-            </v-list-item-title>
-            <v-list-item-subtitle>DePaul University</v-list-item-subtitle>
-            <v-list-item-subtitle>June 2021</v-list-item-subtitle>
-            <v-list-item-subtitle>GPA: 3.9</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </v-col>
-      <v-col cols="12">
-        <v-row no-gutters class="text-center py-3">
-          <v-list-item-title>
-            Skills
-          </v-list-item-title>
-          <v-col
-            :cols="4"
-            class="my-n3"
-            v-for="skill in skills"
-            :key="skill.name"
-          >
-            <v-list-item>
-              <v-list-item-content>
-                <v-list-item-subtitle>{{ skill.name }}</v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
+  <v-row class="d-flex mx-0">
+    <v-col cols="12" class="d-flex justify-center">
+      <v-card
+        :width="isMobile() ? '100vw' : '30vw'"
+        class="py-2 d-flex"
+        outlined
+        rounded="pill"
+      >
+        <v-row class="text-center align-center">
+          <v-col cols="12">
+            <v-btn rounded color="secondary" class="mx-2" :href="resume"
+              >Resume</v-btn
+            >
+            <v-btn
+              rounded
+              color="secondary"
+              class="mx-2"
+              href="https://github.com/wesamjabali"
+              target="_blank"
+              >GitHub</v-btn
+            >
+            <v-btn
+              rounded
+              color="secondary"
+              class="mx-2"
+              href="https://linkedin.com/in/wesamjabali"
+              target="_blank"
+              >Linkedin</v-btn
+            >
           </v-col>
         </v-row>
-      </v-col>
-    </v-row>
-  </v-card>
+      </v-card>
+    </v-col>
+    <v-col :cols="isMobile() ? '12' : '6'">
+      <v-card
+        light
+        tile
+        width="100vw"
+        :height="isMobile() ? '400px' : '350px'"
+        class="py-2 d-flex mb-1"
+      >
+        <v-row>
+          <v-col cols="12">
+            <v-card color="primary" height="100" class="mt-n2" flat tile>
+              <v-row no-gutters>
+                <v-col cols="2">
+                  <v-avatar height="150" width="150" class="ml-2 mt-2"
+                    ><v-img
+                      src="https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/profile.png?raw=true"
+                  /></v-avatar>
+                </v-col>
+                <v-col
+                  style="height:100px;"
+                  :class="
+                    isMobile()
+                      ? 'd-flex white--text title align-center justify-end'
+                      : 'd-flex white--text title align-center justify-center'
+                  "
+                  cols="9"
+                >
+                  Wesam Jabali
+                </v-col>
+                <v-col cols="1" />
+
+                <v-col cols="12">
+                  <div class="mx-6 mt-6 text-center">{{ bio }}</div>
+                </v-col>
+              </v-row>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-card>
+    </v-col>
+    <!-- Skills -->
+    <v-col :cols="isMobile() ? '12' : '6'">
+      <v-card
+        light
+        tile
+        width="100vw"
+        :height="isMobile() ? '400px' : '350px'"
+        class="py-2 d-flex mb-1"
+      >
+        <v-row>
+          <v-col cols="12">
+            <v-card color="primary" height="100" class="mt-n2" flat tile>
+              <v-row no-gutters>
+                <v-col
+                  style="height:100px;"
+                  class="d-flex white--text title align-center justify-center"
+                  cols="12"
+                >
+                  Skills
+                </v-col>
+              </v-row>
+            </v-card>
+            <v-row no-gutters class="d-flex align-center">
+              <v-col
+                v-for="skill in skills"
+                :key="skill.name"
+                class="text-center mt-2"
+                cols="4"
+              >
+                {{ skill.name }}
+              </v-col>
+              <v-card outlined class="mx-3 mt-1" width="100%">
+                <v-row no-gutters class="d-flex justify-center">
+                  <v-col
+                    v-for="skill in skills"
+                    :key="skill.icon"
+                    class="mx-3 d-flex justify-center"
+                    cols="1"
+                  >
+                    <v-img
+                      :src="skill.icon"
+                      class="mx-3 my-1 d-flex justify-center"
+                      max-height="25"
+                      max-width="25"
+                    >
+                    </v-img>
+                  </v-col>
+                </v-row>
+              </v-card>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-card>
+    </v-col>
+    <!-- Education -->
+    <v-col :cols="isMobile() ? '12' : '6'">
+      <v-card
+        light
+        tile
+        width="100vw"
+        :height="isMobile() ? '400px' : '350px'"
+        class="py-2 d-flex mb-1"
+      >
+        <v-row>
+          <v-col cols="12">
+            <v-card color="primary" height="100" class="mt-n2" flat tile>
+              <v-row no-gutters>
+                <v-col
+                  style="height:100px;"
+                  class="d-flex white--text title align-center justify-center"
+                  cols="12"
+                >
+                  Education
+                </v-col>
+              </v-row>
+            </v-card>
+
+            <v-col cols="12" class="text-center">
+              DePaul University
+            </v-col>
+          </v-col>
+        </v-row>
+      </v-card>
+    </v-col>
+    <!--  -->
+    <v-col :cols="isMobile() ? '12' : '6'">
+      <v-card
+        light
+        tile
+        width="100vw"
+        :height="isMobile() ? '400px' : '350px'"
+        class="py-2 d-flex mb-1"
+      >
+        <v-row>
+          <v-col cols="12">
+            <v-card color="primary" height="100" class="mt-n2" flat tile>
+              <v-row no-gutters>
+                <v-col
+                  style="height:100px;"
+                  class="d-flex white--text title align-center justify-center"
+                  cols="12"
+                >
+                  Another Block
+                </v-col>
+              </v-row>
+            </v-card>
+
+            <v-col cols="12" class="text-center">
+              DePaul University
+            </v-col>
+          </v-col>
+        </v-row>
+      </v-card>
+    </v-col>
+  </v-row>
 </template>
+
+<style>
+html {
+  overflow-y: hidden;
+  width: 100%;
+}
+
+body {
+  overflow-y: hidden;
+  width: 100%;
+}
+</style>
 
 <script>
 export default {
@@ -87,6 +211,9 @@ export default {
   },
   data() {
     return {
+      bio:
+        "Hey there! Thanks for visiting my page. My name is Wesam Jabali and looking for career in Software Development. I've created projects, some for practical reasons and some for the experience. Go to the projects tab to check them out!",
+      hobbies: ["Camping", "Fishing", "Road Trips", "Programming"],
       resume:
         "https://github.com/wesamjabali/PersonalSite/raw/main/src/assets/Jabali%20Wesam%20Resume.pdf",
 
@@ -98,17 +225,17 @@ export default {
         { name: "Swift", icon: require("@/assets/icons/swift.png") },
         { name: "Python", icon: require("@/assets/icons/python.png") },
         { name: "SQL", icon: require("@/assets/icons/sql.png") },
-        { name: "PostgreSQL", icon: require("@/assets/icons/sql.png") },
         { name: "Git", icon: require("@/assets/icons/git.png") },
         { name: "Node", icon: require("@/assets/icons/nodejs.png") },
         { name: "ExpressJS", icon: require("@/assets/icons/express.png") },
         { name: "VueJS", icon: require("@/assets/icons/vue.png") },
         { name: "Data Analysis", icon: require("@/assets/icons/data.png") },
-        { name: "JWT" },
         {
           name: "Interpersonal",
           icon: require("@/assets/icons/handshake.png"),
         },
+        { name: "JWT", icon: require("@/assets/icons/jwt.png") },
+        { name: "PostgreSQL" },
       ],
     };
   },

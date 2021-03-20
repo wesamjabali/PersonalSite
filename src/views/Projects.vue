@@ -1,5 +1,4 @@
 <template>
-  <!-- Projects Col -->
   <v-row class="d-flex">
     <v-col
       :cols="$vuetify.breakpoint.mdAndUp ? '6' : '12'"
@@ -7,11 +6,12 @@
       :key="project.name"
     >
       <v-card
+        light
+        tile
         :href="project.url"
         target="_blank"
         height="350px"
         class="mx-2 mb-1 "
-        tile
         hover
       >
         <v-img :src="project.photo" height="150px"> </v-img>
