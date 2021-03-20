@@ -1,5 +1,5 @@
 <template>
-  <v-row style="height:800px" class="d-flex mt-1 mx-0">
+  <v-row :style="isMobile() ? 'height:100%' : 'height:740px'" class="d-flex mt-1 mx-0">
     <v-snackbar top tile color="success" v-model="snackbar"
       >Sent! I'll get back to you shortly.</v-snackbar
     >
@@ -100,10 +100,6 @@
                   Thank You
                 </v-col>
                 <v-col cols="1" />
-
-                <v-col cols="12">
-                  <div class="mx-6 mt-3 text-center">{{ bio }}</div>
-                </v-col>
                 <!--  -->
                 <v-row
                   class="d-flex justify-center text-center mx-12 mt-6"
