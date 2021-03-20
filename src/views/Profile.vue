@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-1 my-2 pb-5" tile>
+  <v-card class="mx-2 my-2 pb-5" tile>
     <v-row no-gutters>
       <v-col cols="12">
         <v-card

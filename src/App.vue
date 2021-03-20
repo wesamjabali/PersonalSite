@@ -55,6 +55,15 @@
 </template>
 
 <style>
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%
+}
 .theme--light .vue-typer .custom.char.typed {
   color: #000000;
 }

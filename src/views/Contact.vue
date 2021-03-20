@@ -3,14 +3,14 @@
     <v-snackbar top tile color="success" v-model="snackbar"
       >Sent! I'll get back to you shortly.</v-snackbar
     >
-    <v-card :disabled="sent" class="mx-1 mb-2" width="100vw" tile>
+    <v-card :disabled="sent" class="mx-2 mb-2" width="100vw" tile>
       <v-card
         flat
         tile
         class="primary white--text d-flex align-center justify-center"
         height="170px"
       >
-        <div class="text-h3">
+        <div class="text-h3 mx-2">
           Contact
         </div>
       </v-card>
