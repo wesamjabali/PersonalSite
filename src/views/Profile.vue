@@ -162,7 +162,8 @@
       </v-card>
     </v-col>
     <!-- Education -->
-    <v-col :cols="isMobile() ? '12' : '12'">
+    <v-col v-if="!isMobile()" cols="3" />
+    <v-col :cols="isMobile() ? '12' : '6'">
       <v-card
         tile
         width="100vw"
@@ -198,6 +199,8 @@
         </v-row>
       </v-card>
     </v-col>
+    <v-col v-if="!isMobile()" cols="3" />
+
     <!--  -->
   </v-row>
 </template>
