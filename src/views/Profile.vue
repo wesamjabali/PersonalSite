@@ -31,18 +31,24 @@
                 <v-col cols="1" />
 
                 <v-col cols="12">
-                  <div class="mx-6 mt-3 text-center">{{ bio }}</div>
+                  <div class="mx-6 mt-3 text-center">
+                    {{ bio }}
+                  </div>
                 </v-col>
                 <!--  -->
 
                 <v-col cols="12" class="d-flex justify-center">
-                  <v-card class="py-2 mx-3 mt-5" outlined width="100%">
+                  <v-card
+                    :class="isMobile() ? 'mx-3 py-2 mt-3' : 'mx-3 py-2 mt-5'"
+                    outlined
+                    width="100%"
+                  >
                     <v-row class="text-center align-center">
                       <v-col cols="12">
                         <v-btn
                           rounded
                           color="secondary"
-                          @click="window.open(resume)"
+                          :href="resume"
                           >Resume</v-btn
                         >
                         <v-btn
@@ -210,9 +216,10 @@ export default {
   data() {
     return {
       bio:
-        "Hey there! Thanks for visiting my page. My name is Wesam Jabali and I'm starting my career in Software Development. I've created plenty of projects, some for practical reasons and some for the experience. Go to the projects tab to check them out!",
+        "Hey there! My name is Wesam Jabali and I'm starting my career in Software Development. I've created plenty of projects, some for practical reasons and some for the experience. Go to the projects tab to check them out!",
       hobbies: ["Camping", "Fishing", "Road Trips", "Programming"],
-      // resume: require("@/assets/Jabali_Wesam_Resume.pdf"),
+      resume:
+        "https://github.com/wesamjabali/PersonalSite/raw/main/src/assets/Jabali_Wesam_Resume.pdf",
       depaulLogo: require("@/assets/depaul.png"),
       skills: [
         { name: "Fullstack", icon: require("@/assets/icons/stack.png") },
