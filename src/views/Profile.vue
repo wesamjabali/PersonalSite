@@ -39,7 +39,10 @@
                   <v-card class="py-2 mx-3 mt-5" outlined width="100%">
                     <v-row class="text-center align-center">
                       <v-col cols="12">
-                        <v-btn rounded color="secondary" :href="resume"
+                        <v-btn
+                          rounded
+                          color="secondary"
+                          @click="window.open(resume)"
                           >Resume</v-btn
                         >
                         <v-btn
@@ -165,6 +168,17 @@
       >
         <v-row>
           <v-col cols="12">
+            <v-card color="primary" height="100" class="mt-n2" flat tile>
+              <v-row no-gutters>
+                <v-col
+                  style="height:100px;"
+                  class="d-flex white--text title align-center justify-center"
+                  cols="12"
+                >
+                  Education
+                </v-col>
+              </v-row>
+            </v-card>
             <v-col cols="12">
               <div class="d-flex justify-center">
                 <v-img :src="depaulLogo" max-height="98" max-width="150" />
@@ -177,24 +191,6 @@
                 June 2021
               </div>
             </v-col>
-            <v-card
-              color="primary"
-              style="bottom:0; left:0; right:0; position:absolute;"
-              height="100"
-              class="mt-n2"
-              flat
-              tile
-            >
-              <v-row no-gutters>
-                <v-col
-                  style="height:100px;"
-                  class="d-flex white--text title align-center justify-center"
-                  cols="12"
-                >
-                  Education
-                </v-col>
-              </v-row>
-            </v-card>
           </v-col>
         </v-row>
       </v-card>
@@ -216,8 +212,7 @@ export default {
       bio:
         "Hey there! Thanks for visiting my page. My name is Wesam Jabali and I'm starting my career in Software Development. I've created plenty of projects, some for practical reasons and some for the experience. Go to the projects tab to check them out!",
       hobbies: ["Camping", "Fishing", "Road Trips", "Programming"],
-      resume:
-        "https://github.com/wesamjabali/PersonalSite/raw/main/src/assets/Jabali%20Wesam%20Resume.pdf",
+      // resume: require("@/assets/Jabali_Wesam_Resume.pdf"),
       depaulLogo: require("@/assets/depaul.png"),
       skills: [
         { name: "Fullstack", icon: require("@/assets/icons/stack.png") },
