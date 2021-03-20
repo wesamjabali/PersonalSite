@@ -23,7 +23,7 @@
               ></vue-typer>
             </div>
           </v-col>
-          <v-col cols="2" class="d-flex justify-right">
+          <v-col cols="2" :class="isMobile() ? 'd-flex ml-n3 mt-n6': 'd-flex align-center justify-center'">
             <v-switch
               class="switch"
               inset
@@ -83,6 +83,11 @@ export default {
     return {
       tab: 0,
     };
+  },
+  methods: {
+    isMobile() {
+      return !this.$vuetify.breakpoint.mdAndUp;
+    },
   },
 };
 </script>

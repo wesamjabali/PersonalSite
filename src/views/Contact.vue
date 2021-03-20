@@ -3,7 +3,7 @@
     <v-snackbar top tile color="success" v-model="snackbar"
       >Sent! I'll get back to you shortly.</v-snackbar
     >
-    <v-card :disabled="sent" class="mx-2 mb-2" width="100vw" tile>
+    <v-card :disabled="sent" class="mx-1 mb-2" width="100vw" tile>
       <v-card
         flat
         tile

@@ -10,7 +10,7 @@
         :href="project.url"
         target="_blank"
         height="350px"
-        class="mx-2 mb-1 "
+        class="mx-1 mb-1 "
         tile
         hover
       >
