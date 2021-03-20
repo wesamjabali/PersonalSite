@@ -62,7 +62,7 @@
 </template>
 
 <style>
-html {
+/* html {
   overflow-x: hidden;
   width: 100%;
 }
@@ -70,7 +70,7 @@ html {
 body {
   overflow-x: hidden;
   width: 100%;
-}
+} */
 .theme--light .vue-typer .custom.char.typed {
   color: #000000;
 }

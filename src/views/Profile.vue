@@ -2,7 +2,6 @@
   <v-row class="d-flex mx-0">
     <v-col :cols="isMobile() ? '12' : '6'">
       <v-card
-        
         tile
         width="100vw"
         :height="isMobile() ? '400px' : '350px'"
@@ -73,13 +72,12 @@
     <!-- Skills -->
     <v-col :cols="isMobile() ? '12' : '6'">
       <v-card
-        
         tile
         width="100vw"
         :height="isMobile() ? '370px' : '350px'"
         class="py-2 d-flex mb-1"
       >
-        <v-row >
+        <v-row>
           <v-col cols="12">
             <v-card color="primary" height="100" class="mt-n2" flat tile>
               <v-row no-gutters>
@@ -92,7 +90,12 @@
                 </v-col>
               </v-row>
             </v-card>
-            <v-row no-gutters :class="isMobile() ? 'd-flex mt-4 align-center' : 'd-flex align-center'">
+            <v-row
+              no-gutters
+              :class="
+                isMobile() ? 'd-flex mt-4 align-center' : 'd-flex align-center'
+              "
+            >
               <v-col
                 v-for="skill in skills"
                 :key="skill.name"
@@ -155,7 +158,6 @@
     <!-- Education -->
     <v-col :cols="isMobile() ? '12' : '12'">
       <v-card
-        
         tile
         width="100vw"
         :height="isMobile() ? '400px' : '350px'"
