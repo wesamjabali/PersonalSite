@@ -34,7 +34,7 @@
               outlined
               label="Name"
               name="name"
-              class="mb-n4"
+              class="mb-n2"
               :rules="required"
             />
 
@@ -44,7 +44,7 @@
               outlined
               label="Company"
               name="company"
-              class="mb-n4"
+              class="mb-n2"
               :rules="required"
             />
 
@@ -54,7 +54,7 @@
               outlined
               label="E-Mail"
               name="email"
-              class="mb-n4"
+              class="mb-n2"
               :rules="emailRules"
             />
             <v-textarea
