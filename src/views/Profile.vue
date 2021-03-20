@@ -224,7 +224,7 @@ export default {
   data() {
     return {
       bio:
-        "Hey there! Thanks for visiting my page. My name is Wesam Jabali and looking for career in Software Development. I've created projects, some for practical reasons and some for the experience. Go to the projects tab to check them out!",
+        "Hey there! Thanks for visiting my page. My name is Wesam Jabali and I'm starting my career in Software Development. I've created plenty of projects, some for practical reasons and some for the experience. Go to the projects tab to check them out!",
       hobbies: ["Camping", "Fishing", "Road Trips", "Programming"],
       resume:
         "https://github.com/wesamjabali/PersonalSite/raw/main/src/assets/Jabali%20Wesam%20Resume.pdf",
