@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <v-row style="max-width: 1200px;" class="mx-auto py-12">
+      <v-row style="max-width: 1200px;" class="mx-auto py-5">
         <v-row class="d-flex align-center">
           <v-col cols="2" />
           <v-col cols="8">
@@ -39,7 +39,7 @@
           </v-col>
         </v-row>
 
-        <v-tabs v-model="tab" class="mb-5" fixed-tabs>
+        <v-tabs v-model="tab" class="mb-2" fixed-tabs>
           <v-tab>Profile</v-tab>
           <v-tab>Projects</v-tab>
           <v-tab>Contact</v-tab>
