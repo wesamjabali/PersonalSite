@@ -92,7 +92,7 @@ export default {
           name: "Vue Portfolio Site",
           url: "https://github.com/wesamjabali/PersonalSite",
           description:
-            "The webiste you're on right now is open-source! Made from scratch in <b>Vue.</b>",
+            "The website you're on right now is open-source! Made from scratch in <b>Vue.</b>",
           photo: "https://i.imgur.com/r8dG6wl.jpeg",
           demo: "https://wesamjabali.com/",
         },
