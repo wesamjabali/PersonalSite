@@ -1,17 +1,17 @@
 <template>
-  <v-row class="d-flex">
+  <v-row class="d-flex mt-1 mx-0">
     <v-col
       :cols="$vuetify.breakpoint.mdAndUp ? '6' : '12'"
       v-for="project in projects"
       :key="project.name"
     >
       <v-card
-        
         tile
         :href="project.url"
         target="_blank"
         height="350px"
-        class="mx-2 mb-1"
+        width="100%"
+        class="mb-1"
         hover
       >
         <v-img :src="project.photo" height="150px"> </v-img>
@@ -37,9 +37,8 @@
         </v-card-actions>
       </v-card>
     </v-col>
-  
   </v-row>
-  
+
   <!-- Done -->
 </template>
 
@@ -68,13 +67,6 @@ export default {
             "https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/server_banner_compact.png?raw=true",
         },
         {
-          name: "ChiBatterySystems Clock",
-          url: "https://chibatterysystems.com",
-          description:
-            "A closed-source (by client request) time-sheet management system I created full-stack using <b>VueJS, NodeJS, ExpressJS</b> and <b>PostgreSQL</b><br />This is currently in use by over 20 employees on a daily basis.",
-          photo: "https://i.ytimg.com/vi/y8HhPXo-Dxw/maxresdefault.jpg",
-        },
-        {
           name: "D3L Frontend",
           url: "https://github.com/wesamjabali/d3l-ui",
           description:
@@ -90,6 +82,21 @@ export default {
             "The API that runs D3L. Written with <b>NodeJS, ExpressJS, Knex, PostgreSQL.</b> Authentication done with <b>JWT.</b>",
           photo:
             "https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/API.png?raw=true",
+        },
+        {
+          name: "ChiBatterySystems Clock",
+          url: "https://chibatterysystems.com",
+          description:
+            "A closed-source (by client request) time-sheet management system I created full-stack using <b>VueJS, NodeJS, ExpressJS</b> and <b>PostgreSQL</b><br />This is currently in use by over 20 employees on a daily basis.",
+          photo: "https://i.ytimg.com/vi/y8HhPXo-Dxw/maxresdefault.jpg",
+        },
+        {
+          name: "Vue Portfolio Site",
+          url: "https://github.com/wesamjabali/PersonalSite",
+          description:
+            "The webiste you're on right now is open-source! Made from scratch in <b>Vue.</b>",
+          photo: "https://i.imgur.com/r8dG6wl.jpeg",
+          demo: "https://wesamjabali.com/",
         },
       ],
     };

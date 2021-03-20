@@ -1,5 +1,5 @@
 <template>
-  <v-row class="d-flex mx-0">
+  <v-row class="d-flex mt-1 mx-0">
     <v-col :cols="isMobile() ? '12' : '6'">
       <v-card
         tile

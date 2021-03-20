@@ -1,11 +1,10 @@
 <template>
-  <v-row class="d-flex mx-0">
+  <v-row style="height:800px" class="d-flex mt-1 mx-0">
     <v-snackbar top tile color="success" v-model="snackbar"
       >Sent! I'll get back to you shortly.</v-snackbar
     >
     <v-col :cols="isMobile() ? '12' : '6'">
       <v-card
-        
         :disabled="sent"
         height="560px"
         class="mb-2"
@@ -15,7 +14,7 @@
         <v-card
           flat
           tile
-          class="primary white--text d-flex align-center justify-center"
+          class="primary white--text d-flex align-center justify-center "
           height="100px"
         >
           <div class="title">
@@ -26,7 +25,7 @@
           <v-form
             ref="contact"
             name="contact"
-            class="text-center"
+            class="text-center mx-4"
             @submit.prevent="sendEmail"
           >
             <v-text-field
@@ -74,10 +73,9 @@
     <!--  -->
     <v-col :cols="isMobile() ? '12' : '6'">
       <v-card
-        
         tile
-        width="100vw"
-        :height="isMobile() ? '560px' : '560px'"
+        width="100%"
+        height="560px"
         class="py-2 d-flex mb-1"
       >
         <v-row>
@@ -132,7 +130,7 @@
             v-if="!isMobile()"
             color="primary"
             style="bottom:0; left:0; right:0; position:absolute;"
-            height="100"
+            height="100px"
             class="mt-n2"
             flat
             tile
