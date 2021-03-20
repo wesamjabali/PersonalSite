@@ -61,6 +61,9 @@
 .theme--dark .vue-typer .custom.char.typed {
   color: #ffffff;
 }
+.switch {
+  transform: rotate(90deg);
+}
 </style>
 
 <script>
