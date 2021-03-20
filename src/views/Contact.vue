@@ -11,7 +11,7 @@
         height="170px"
       >
         <div class="text-h3 mx-2">
-          Contact
+          Inquiries
         </div>
       </v-card>
       <v-col>
