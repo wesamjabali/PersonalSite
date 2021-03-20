@@ -9,7 +9,7 @@
         tile
         :href="project.url"
         target="_blank"
-        height="350px"
+        :height="isMobile() ? '400px' : '350px'"
         width="100%"
         class="mb-1"
         hover
@@ -45,6 +45,11 @@
 <script>
 export default {
   name: "Projects",
+  methods: {
+    isMobile() {
+      return !this.$vuetify.breakpoint.mdAndUp;
+    },
+  },
   data() {
     return {
       projects: [
@@ -84,19 +89,19 @@ export default {
             "https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/API.png?raw=true",
         },
         {
-          name: "ChiBatterySystems Clock",
-          url: "https://chibatterysystems.com",
-          description:
-            "A closed-source (by client request) time-sheet management system I created full-stack using <b>VueJS, NodeJS, ExpressJS</b> and <b>PostgreSQL</b><br />This is currently in use by over 20 employees on a daily basis.",
-          photo: "https://i.ytimg.com/vi/y8HhPXo-Dxw/maxresdefault.jpg",
-        },
-        {
           name: "Vue Portfolio Site",
           url: "https://github.com/wesamjabali/PersonalSite",
           description:
             "The webiste you're on right now is open-source! Made from scratch in <b>Vue.</b>",
           photo: "https://i.imgur.com/r8dG6wl.jpeg",
           demo: "https://wesamjabali.com/",
+        },
+        {
+          name: "ChiBatterySystems Clock",
+          url: "https://chibatterysystems.com",
+          description:
+            "A closed-source (by client request) time-sheet management system I created full-stack using <b>VueJS, NodeJS, ExpressJS</b> and <b>PostgreSQL</b><br />This is currently in use by over 20 employees on a daily basis.",
+          photo: "https://i.ytimg.com/vi/y8HhPXo-Dxw/maxresdefault.jpg",
         },
       ],
     };
