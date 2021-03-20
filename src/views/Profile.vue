@@ -2,7 +2,7 @@
   <v-row class="d-flex mx-0">
     <v-col :cols="isMobile() ? '12' : '6'">
       <v-card
-        light
+        
         tile
         width="100vw"
         :height="isMobile() ? '400px' : '350px'"
@@ -73,7 +73,7 @@
     <!-- Skills -->
     <v-col :cols="isMobile() ? '12' : '6'">
       <v-card
-        light
+        
         tile
         width="100vw"
         :height="isMobile() ? '370px' : '350px'"
@@ -155,7 +155,7 @@
     <!-- Education -->
     <v-col :cols="isMobile() ? '12' : '12'">
       <v-card
-        light
+        
         tile
         width="100vw"
         :height="isMobile() ? '400px' : '350px'"
@@ -200,18 +200,6 @@
     <!--  -->
   </v-row>
 </template>
-
-<style>
-html {
-  overflow-y: hidden;
-  width: 100%;
-}
-
-body {
-  overflow-y: hidden;
-  width: 100%;
-}
-</style>
 
 <script>
 export default {

@@ -6,12 +6,12 @@
       :key="project.name"
     >
       <v-card
-        light
+        
         tile
         :href="project.url"
         target="_blank"
         height="350px"
-        class="mx-2 mb-1 "
+        class="mx-2 mb-1"
         hover
       >
         <v-img :src="project.photo" height="150px"> </v-img>

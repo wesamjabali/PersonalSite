@@ -5,7 +5,7 @@
     >
     <v-col :cols="isMobile() ? '12' : '6'">
       <v-card
-        light
+        
         :disabled="sent"
         height="560px"
         class="mb-2"
@@ -74,7 +74,7 @@
     <!--  -->
     <v-col :cols="isMobile() ? '12' : '6'">
       <v-card
-        light
+        
         tile
         width="100vw"
         :height="isMobile() ? '560px' : '560px'"
