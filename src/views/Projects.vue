@@ -14,7 +14,7 @@
         class="mb-1"
         hover
       >
-        <v-img :src="project.photo" height="150px"> </v-img>
+        <v-img :src="project.photo" height="160px"> </v-img>
         <div class="text-center title pt-3">
           {{ project.name }}
         </div>
@@ -84,8 +84,7 @@ export default {
           url: "https://github.com/wesamjabali/d3l-backend",
           description:
             "The API that runs D3L. Written with <b>NodeJS, ExpressJS, Knex, PostgreSQL.</b> Authentication done with <b>JWT.</b>",
-          photo:
-            "https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/API.png?raw=true",
+          photo: "https://i.imgur.com/2KiJ1gz.png",
         },
         {
           name: "Vue Portfolio Site",
