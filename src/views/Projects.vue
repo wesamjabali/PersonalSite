@@ -58,8 +58,7 @@ export default {
           url: "https://github.com/wesamjabali/BlueDaemon",
           description:
             "A Discord bot to manage university servers, written with <b>Node</b> and <b>DiscordJS</b>",
-          photo:
-            "https://i.imgur.com/N1nuutW.png",
+          photo: "https://i.imgur.com/pUAb3nL.png",
           demo:
             "https://discord.com/oauth2/authorize?client_id=819103115693260860&permissions=8&scope=bot",
         },

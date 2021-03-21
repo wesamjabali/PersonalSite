@@ -15,7 +15,7 @@
                   :shuffle="false"
                   initial-action="typing"
                   :pre-type-delay="0"
-                  :type-delay="120"
+                  :type-delay="150"
                   :pre-erase-delay="2000"
                   :erase-delay="50"
                   erase-style="backspace"
