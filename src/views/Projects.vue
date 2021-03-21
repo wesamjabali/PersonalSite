@@ -59,7 +59,7 @@ export default {
           description:
             "A Discord bot to manage university servers, written with <b>Node</b> and <b>DiscordJS</b>",
           photo:
-            "https://github.com/wesamjabali/BlueDaemon/blob/main/assets/banner.png?raw=true",
+            "https://i.imgur.com/N1nuutW.png",
           demo:
             "https://discord.com/oauth2/authorize?client_id=819103115693260860&permissions=8&scope=bot",
         },
