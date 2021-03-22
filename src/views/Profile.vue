@@ -29,11 +29,11 @@
                   Wesam Jabali
                 </v-col>
                 <v-col cols="1" />
-                  <v-col cols="12">
-                    <div class="mx-12 mt-10 text-center">
-                      {{ bio }}
-                    </div>
-                  </v-col>
+                <v-col cols="12">
+                  <div class="mx-12 mt-10 text-center">
+                    {{ bio }}
+                  </div>
+                </v-col>
                 <!--  -->
 
                 <!--  -->
@@ -192,7 +192,7 @@
             :cols="isMobile() ? '12' : '6'"
             :class="isMobile() ? 'mt-5' : 'ml-2'"
           >
-            <v-card outlined height="100%" class="mx-2 mt-1  pt-2">
+            <v-card outlined height="100%" class="mx-2 mt-1 pt-2">
               <div class="d-flex justify-center mb-10">
                 <v-img :src="depaulLogo" max-height="98" max-width="150" />
               </div>
@@ -208,7 +208,7 @@
             :cols="isMobile() ? '12' : '6'"
             :class="isMobile() ? '' : 'mx-n2 ml-n4'"
           >
-            <v-card outlined height="100%" class="mx-2 mt-1 pt-1">
+            <v-card outlined height="100%" class="mx-2 mt-1">
               <div
                 class="text-center mx-2"
                 v-for="item in school"
@@ -243,14 +243,13 @@ export default {
   data() {
     return {
       school: [
-        { name: "Member of Computer Science Society" },
         { name: "Created/manage largest communication network for CDM" },
         { name: "Hold free tutoring sessions" },
-        { name: "Maintain straight A grades" },
         {
           name: "Make personal projects to apply knowledge learned in classes",
-          last: true,
         },
+        { name: "Member of Computer Science Society" },
+        { name: "Maintain straight A grades", last: true },
       ],
       bio: `A highly driven and adaptable Chicago based software developer looking for a full time job.`,
       resume:
