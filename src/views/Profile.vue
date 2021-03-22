@@ -208,7 +208,7 @@
             :cols="isMobile() ? '12' : '6'"
             :class="isMobile() ? '' : 'mx-n2 ml-n4'"
           >
-            <v-card outlined height="100%" class="mx-2 mt-1 pt-5">
+            <v-card outlined height="100%" class="mx-2 mt-1 pt-1">
               <div
                 class="text-center mx-2"
                 v-for="item in school"
