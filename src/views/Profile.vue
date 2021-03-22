@@ -7,7 +7,7 @@
         :height="isMobile() ? '400px' : '350px'"
         class="py-2 d-flex mb-1"
       >
-        <v-row>
+        <v-row class="d-flex">
           <v-col cols="12">
             <v-card color="primary" height="100" class="mt-n2" flat tile>
               <v-row no-gutters>
@@ -29,48 +29,46 @@
                   Wesam Jabali
                 </v-col>
                 <v-col cols="1" />
-
-                <v-col cols="12">
-                  <div class="mx-6 mt-3 text-center">
-                    {{ bio }}
-                  </div>
-                </v-col>
+                  <v-col cols="12">
+                    <div class="mx-12 mt-10 text-center">
+                      {{ bio }}
+                    </div>
+                  </v-col>
                 <!--  -->
-
-                <v-col cols="12" class="d-flex justify-center">
-                  <v-card
-                    :class="isMobile() ? 'mx-3 py-2 mt-3' : 'mx-3 py-2 mt-5'"
-                    outlined
-                    width="100%"
-                  >
-                    <v-row class="text-center align-center">
-                      <v-col cols="12">
-                        <v-btn rounded color="secondary" @click="openPDF()">
-                          Resume</v-btn
-                        >
-                        <v-btn
-                          rounded
-                          color="secondary"
-                          class="mx-4"
-                          href="https://github.com/wesamjabali"
-                          target="_blank"
-                          >GitHub</v-btn
-                        >
-                        <v-btn
-                          rounded
-                          color="secondary"
-                          href="https://linkedin.com/in/wesamjabali"
-                          target="_blank"
-                          >Linkedin</v-btn
-                        >
-                      </v-col>
-                    </v-row>
-                  </v-card>
-                </v-col>
 
                 <!--  -->
               </v-row>
             </v-card>
+            <v-col cols="12">
+              <v-card
+                class="mb-2 mx-3 py-2"
+                outlined
+                style="bottom:0px; right:0px; left:0; position:absolute;"
+              >
+                <v-row class="text-center align-center">
+                  <v-col cols="12">
+                    <v-btn rounded color="secondary" @click="openPDF()">
+                      Resume</v-btn
+                    >
+                    <v-btn
+                      rounded
+                      color="secondary"
+                      class="mx-4"
+                      href="https://github.com/wesamjabali"
+                      target="_blank"
+                      >GitHub</v-btn
+                    >
+                    <v-btn
+                      rounded
+                      color="secondary"
+                      href="https://linkedin.com/in/wesamjabali"
+                      target="_blank"
+                      >Linkedin</v-btn
+                    >
+                  </v-col>
+                </v-row>
+              </v-card>
+            </v-col>
           </v-col>
         </v-row>
       </v-card>
@@ -111,9 +109,9 @@
                 {{ skill.name }}
               </v-col>
               <v-card
+                class="mb-2 mx-3"
                 outlined
-                :class="isMobile() ? 'mx-3 mt-3' : 'mx-3 mt-1'"
-                width="100%"
+                style="bottom:0px; right:0px; left:0; position:absolute;"
               >
                 <v-row
                   v-if="!isMobile()"
@@ -162,17 +160,23 @@
       </v-card>
     </v-col>
     <!-- Education -->
-    <v-col v-if="!isMobile()" cols="3" />
-    <v-col :cols="isMobile() ? '12' : '6'">
+    <v-col v-if="!isMobile()" cols="2" />
+    <v-col :cols="isMobile() ? '12' : '8'">
       <v-card
         tile
         width="100vw"
-        :height="isMobile() ? '400px' : '350px'"
-        class="py-2 d-flex mb-1"
+        :height="isMobile() ? '' : '350px'"
+        class="pb-3 d-flex mb-1"
       >
-        <v-row>
+        <v-row class="d-flex">
           <v-col cols="12">
-            <v-card color="primary" height="100" class="mt-n2" flat tile>
+            <v-card
+              color="primary"
+              height="100px"
+              class="mt-n2 mb-n9"
+              flat
+              tile
+            >
               <v-row no-gutters>
                 <v-col
                   style="height:100px;"
@@ -183,23 +187,42 @@
                 </v-col>
               </v-row>
             </v-card>
-            <v-col cols="12">
-              <div class="d-flex justify-center">
+          </v-col>
+          <v-col
+            :cols="isMobile() ? '12' : '6'"
+            :class="isMobile() ? 'mt-5' : 'ml-2'"
+          >
+            <v-card outlined height="100%" class="mx-2 mt-1  pt-2">
+              <div class="d-flex justify-center mb-10">
                 <v-img :src="depaulLogo" max-height="98" max-width="150" />
               </div>
-            </v-col>
-            <v-col cols="12">
               <div class="text-center">
                 Computer Science <br />
-                3.9 GPA <br />
+                3.92 GPA <br />
                 June 2021
               </div>
-            </v-col>
+            </v-card>
+          </v-col>
+
+          <v-col
+            :cols="isMobile() ? '12' : '6'"
+            :class="isMobile() ? '' : 'mx-n2 ml-n4'"
+          >
+            <v-card outlined height="100%" class="mx-2 mt-1 pt-5">
+              <div
+                class="text-center mx-2"
+                v-for="item in school"
+                :key="item.name"
+              >
+                {{ item.name }}
+                <v-divider v-if="!item.last" class="mx-n2 my-1" />
+              </div>
+            </v-card>
           </v-col>
         </v-row>
       </v-card>
     </v-col>
-    <v-col v-if="!isMobile()" cols="3" />
+    <v-col v-if="!isMobile()" cols="2" />
 
     <!--  -->
   </v-row>
@@ -219,31 +242,39 @@ export default {
   },
   data() {
     return {
-      bio:
-        "Hey there! My name is Wesam Jabali and I'm starting my career in Software Development. I've created plenty of projects, some for practical reasons and some for the experience. Go to the projects tab to check them out!",
-      hobbies: ["Camping", "Fishing", "Road Trips", "Programming"],
+      school: [
+        { name: "Member of Computer Science Society" },
+        { name: "Created/manage largest communication network for CDM" },
+        { name: "Hold free tutoring sessions" },
+        { name: "Maintain straight A grades" },
+        {
+          name: "Make personal projects to apply knowledge learned in classes",
+          last: true,
+        },
+      ],
+      bio: `A highly driven and adaptable Chicago based software developer looking for a full time job.`,
       resume:
         "https://github.com/wesamjabali/PersonalSite/raw/main/src/assets/Jabali_Wesam_Resume.pdf",
       depaulLogo: require("@/assets/depaul.png"),
       skills: [
-        { name: "Fullstack", icon: require("@/assets/icons/stack.png") },
         { name: "Java", icon: require("@/assets/icons/java.png") },
-        { name: "JavaScript", icon: require("@/assets/icons/javascript.png") },
         { name: "C/C++", icon: require("@/assets/icons/c.png") },
         { name: "Swift", icon: require("@/assets/icons/swift.png") },
         { name: "Python", icon: require("@/assets/icons/python.png") },
         { name: "SQL", icon: require("@/assets/icons/sql.png") },
         { name: "Git", icon: require("@/assets/icons/git.png") },
+        { name: "Fullstack", icon: require("@/assets/icons/stack.png") },
+        { name: "JavaScript", icon: require("@/assets/icons/javascript.png") },
         { name: "Node", icon: require("@/assets/icons/nodejs.png") },
         { name: "ExpressJS", icon: require("@/assets/icons/express.png") },
         { name: "VueJS", icon: require("@/assets/icons/vue.png") },
-        { name: "Data Analysis", icon: require("@/assets/icons/data.png") },
+        { name: "JWT", icon: require("@/assets/icons/jwt.png") },
         {
           name: "Interpersonal",
           icon: require("@/assets/icons/handshake.png"),
         },
-        { name: "JWT", icon: require("@/assets/icons/jwt.png") },
-        { name: "PostgreSQL" },
+        { name: "Management", icon: require("@/assets/icons/group.png") },
+        { name: "Public Speaking" },
       ],
     };
   },

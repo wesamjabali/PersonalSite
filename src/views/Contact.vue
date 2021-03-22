@@ -1,16 +1,13 @@
 <template>
-  <v-row :style="isMobile() ? 'height:100%' : 'height:740px'" class="d-flex mt-1 mx-0">
+  <v-row
+    :style="isMobile() ? 'height:100%' : 'height:740px'"
+    class="d-flex mt-1 mx-0"
+  >
     <v-snackbar top tile color="success" v-model="snackbar"
       >Sent! I'll get back to you shortly.</v-snackbar
     >
     <v-col :cols="isMobile() ? '12' : '6'">
-      <v-card
-        :disabled="sent"
-        height="560px"
-        class="mb-2"
-        width="100vw"
-        tile
-      >
+      <v-card :disabled="sent" height="560px" class="mb-2" width="100vw" tile>
         <v-card
           flat
           tile
@@ -72,12 +69,7 @@
     </v-col>
     <!--  -->
     <v-col :cols="isMobile() ? '12' : '6'">
-      <v-card
-        tile
-        width="100%"
-        height="560px"
-        class="py-2 d-flex mb-1"
-      >
+      <v-card tile width="100%" height="560px" class="py-2 d-flex mb-1">
         <v-row>
           <v-col cols="12">
             <v-card color="primary" height="100" class="mt-n2" flat tile>
@@ -100,46 +92,19 @@
                   Thank You
                 </v-col>
                 <v-col cols="1" />
-                <!--  -->
-                <v-row
-                  class="d-flex justify-center text-center mx-12 mt-6"
-                  no-gutters
-                >
-                  <v-col cols="12">
-                    I'm currently looking for a full-time job as a Software
-                    Developer. I have most of my experience working in the
-                    front-end and on systems-level programming, and am open to
-                    learning new languages and concepts that would get me ahead.
-                    <br /><br />
-                    I'm looking for a position in or near Chicago.
-                    <br /><br />
-                    I look forward to speaking with you.
-                    <br /><br />
-                    Thanks for stopping by!
-                  </v-col>
-                </v-row>
-                <!--  -->
               </v-row>
             </v-card>
           </v-col>
-          <v-card
-            v-if="!isMobile()"
-            color="primary"
-            style="bottom:0; left:0; right:0; position:absolute;"
-            height="100px"
-            class="mt-n2"
-            flat
-            tile
-          >
-            <v-row no-gutters>
-              <v-col
-                style="height:100px;"
-                class="d-flex white--text title align-center justify-center"
-                cols="12"
-              >
-              </v-col>
-            </v-row>
-          </v-card>
+          <v-col cols="12">
+            <div class="text-center mx-10 mt-n12">
+              Thanks for reaching out! 
+              <br /> <br />
+              If you'd rather reach out to my email or
+              phone directly, please check my resume on the profile tab.
+              <br /><br />
+              I look forward to speaking with you.
+            </div>
+          </v-col>
         </v-row>
       </v-card>
     </v-col>

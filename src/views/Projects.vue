@@ -54,21 +54,20 @@ export default {
     return {
       projects: [
         {
+          name: "ChiBatterySystems Clock",
+          url: "https://chibatterysystems.com",
+          description:
+            "A closed-source (by client request) time-sheet management system I created full-stack using <b>VueJS, NodeJS, ExpressJS</b> and <b>PostgreSQL</b><br />This is currently in use by over 20 employees on a daily basis.",
+          photo: "https://i.ytimg.com/vi/y8HhPXo-Dxw/maxresdefault.jpg",
+        },
+        {
           name: "BlueDaemon",
           url: "https://github.com/wesamjabali/BlueDaemon",
           description:
-            "A Discord bot to manage university servers, written with <b>Node</b> and <b>DiscordJS</b>",
+            "A Discord bot to manage university servers, written with <b>Node</b> and <b>DiscordJS.</b> Sees consistent daily use.",
           photo: "https://i.imgur.com/pUAb3nL.png",
           demo:
             "https://discord.com/oauth2/authorize?client_id=819103115693260860&permissions=8&scope=bot",
-        },
-        {
-          name: "CDM Discussions",
-          url: "https://discord.gg/4GbaSsvbDb",
-          description:
-            "A Discord server I created and manage for DePaul University, consisting of about <b>500 students</b> and <b>7 faculty members.</b>",
-          photo:
-            "https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/server_banner_compact.png?raw=true",
         },
         {
           name: "D3L Frontend",
@@ -87,19 +86,20 @@ export default {
           photo: "https://i.imgur.com/2KiJ1gz.png",
         },
         {
+          name: "CDM Discussions",
+          url: "https://discord.gg/4GbaSsvbDb",
+          description:
+            "A Discord server I created and manage for DePaul University, consisting of about <b>500 students</b> and <b>7 faculty members.</b>",
+          photo:
+            "https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/server_banner_compact.png?raw=true",
+        },
+        {
           name: "Vue Portfolio Site",
           url: "https://github.com/wesamjabali/PersonalSite",
           description:
             "The website you're on right now is open-source! Made from scratch in <b>Vue.</b>",
           photo: "https://i.imgur.com/r8dG6wl.jpeg",
           demo: "https://wesamjabali.com/",
-        },
-        {
-          name: "ChiBatterySystems Clock",
-          url: "https://chibatterysystems.com",
-          description:
-            "A closed-source (by client request) time-sheet management system I created full-stack using <b>VueJS, NodeJS, ExpressJS</b> and <b>PostgreSQL</b><br />This is currently in use by over 20 employees on a daily basis.",
-          photo: "https://i.ytimg.com/vi/y8HhPXo-Dxw/maxresdefault.jpg",
         },
       ],
     };
