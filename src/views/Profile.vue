@@ -242,16 +242,19 @@ export default {
   },
   data() {
     return {
+      bio: `A highly-driven and adaptable Chicago-based software developer looking for a full-time job.`,
       school: [
-        { name: "Created/manage largest communication network for CDM" },
+        {
+          name:
+            "Created largest communication network for students and faculty",
+        },
         { name: "Hold free tutoring sessions" },
         {
-          name: "Make personal projects to apply knowledge learned in classes",
+          name: "Solidify concepts by developing personal projects",
         },
         { name: "Member of Computer Science Society" },
-        { name: "Maintain straight A grades", last: true },
+        { name: 'Achieved straight "A"s', last: true },
       ],
-      bio: `A highly driven and adaptable Chicago based software developer looking for a full time job.`,
       resume:
         "https://github.com/wesamjabali/PersonalSite/raw/main/src/assets/Jabali_Wesam_Resume.pdf",
       depaulLogo: require("@/assets/depaul.png"),
@@ -269,7 +272,7 @@ export default {
         { name: "VueJS", icon: require("@/assets/icons/vue.png") },
         { name: "JWT", icon: require("@/assets/icons/jwt.png") },
         {
-          name: "Interpersonal",
+          name: "Communication",
           icon: require("@/assets/icons/handshake.png"),
         },
         { name: "Management", icon: require("@/assets/icons/group.png") },
