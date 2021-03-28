@@ -198,7 +198,7 @@
               </div>
               <div class="text-center">
                 Computer Science <br />
-                3.92 GPA <br />
+                3.94 GPA <br />
                 June 2021
               </div>
             </v-card>
