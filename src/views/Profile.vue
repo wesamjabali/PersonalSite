@@ -12,7 +12,7 @@
             <v-card color="primary" height="100" class="mt-n2" flat tile>
               <v-row no-gutters>
                 <v-col cols="2">
-                  <v-avatar height="150" width="150" class="ml-2 mt-2"
+                  <v-avatar size="150" class="ml-2 mt-2"
                     ><v-img
                       src="https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/profile.png?raw=true"
                   /></v-avatar>
