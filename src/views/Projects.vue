@@ -89,7 +89,7 @@ export default {
           name: "CDM Discussions",
           url: "https://discord.gg/4GbaSsvbDb",
           description:
-            "A Discord server I created and manage for DePaul University, consisting of over <b>700 students</b> and <b>10 faculty members.</b>",
+            "A Discord server I created and manage for DePaul University, consisting of over <b>1100 students</b> and <b>15 faculty members.</b> The Career Center also hosts events here.",
           photo:
             "https://github.com/wesamjabali/PersonalSite/blob/main/src/assets/server_banner_compact.png?raw=true",
         },
