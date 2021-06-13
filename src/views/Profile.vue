@@ -253,7 +253,7 @@ export default {
           name: "Solidify concepts by developing personal projects",
         },
         { name: "Member of Computer Science Society" },
-        { name: 'Achieved straight "A"s', last: true },
+        { name: 'Graduated Summa Cum Laude', last: true },
       ],
       resume:
         "https://github.com/wesamjabali/PersonalSite/raw/main/src/assets/Jabali_Wesam_Resume.pdf",
